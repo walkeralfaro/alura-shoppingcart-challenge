@@ -48,7 +48,10 @@ public class Main {
         // El remanente que queda
         int remain = balance - total;
 
+        // Ordenando la lista de productos
         productsList.sort(Comparator.comparing(Product::getPrice));
+
+        // Salida por consola de los productos comprados
         System.out.println("*******************************");
         System.out.println("COMPRAS REALIZADAS:\n");
         for (Product product : productsList) {
