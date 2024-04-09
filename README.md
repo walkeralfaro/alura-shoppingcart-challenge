@@ -2,6 +2,9 @@
 
 Este es un reto propuesto por la plataforma Alura como parte de su bootcamp de formación de desarrollo web backen con **Java**.
 
+### Live code:
+Link programa [online][link-javarun]
+
 ## Solución
 
 ### Lógica
@@ -13,7 +16,7 @@ Los productos son almacenados en un Lista `ArrayList` de productos para utilizar
 Se utilizó la interfaz `Comparator` y su método `comparing`:
 
 ```java
-productsList.sort(Comparator.comparing(Product::getPrice));
+        productsList.sort(Comparator.comparing(Product::getPrice));
 ```
 
 ### Manejo excepción
@@ -25,16 +28,16 @@ private static int inputValue(String textStatement) {
     int valueInput = 0;
     boolean valueValidation = true;
     while (valueValidation) {
-            System.out.println(textStatement);
-            try {
-                        valueInput = keyboard.nextInt();
-                keyboard.nextLine();
-                        valueValidation = false;
-            } catch (Exception e) {
-                System.out.println(Colors.RED + "ERROR: ingrese un monto válido" + Colors.RESET);
-                keyboard.nextLine();
-            }
+        System.out.println(textStatement);
+        try {
+            valueInput = keyboard.nextInt();
+            keyboard.nextLine();
+            valueValidation = false;
+        } catch (Exception e) {
+            System.out.println(Colors.RED + "ERROR: ingrese un monto válido" + Colors.RESET);
+            keyboard.nextLine();
         }
+    }
     return valueInput;
 }
 ```
@@ -43,3 +46,4 @@ private static int inputValue(String textStatement) {
 Se agregó una clase `Colors` que retorna atributos de colores para pintar el texto en consola.
 
 
+[link-javarun]: https://www.online-java.com/PtjyVDGdJT
